@@ -37,10 +37,10 @@ export const useAuth = (): {
             if (response.status === 200) {
                 toast.success(response.data.message);
                 router.push("/sign-in");
-            } else {
+            } else if (response.status === 409){
                 toast.error(response.data.message);
                 return;
-            }
+            } 
         } catch (error) {
             console.error("❌ Error during edited user :", error);
             toast.error("An error occurred during sign up");
