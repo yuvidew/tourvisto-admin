@@ -8,7 +8,7 @@ import React from 'react'
 export const TripsList = () => {
     const { allTrips, loading } = useGetTrips();
     return (
-        <section className=' grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 h-screen '>
+        <section className=' grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-3 '>
             {loading && Array(5).fill(null).map((_, i) => (
                 <Skeleton key={i} className=' h-[22rem]' />
             ))}
