@@ -35,7 +35,7 @@ export const SignUpForm = () => {
                     <Input
                         id="username"
                         type="text"
-                        placeholder=""
+                        placeholder="username"
                         value={form.username}
                         onChange={(e) => setForm((prev) => ({
                             ...prev,
@@ -79,10 +79,11 @@ export const SignUpForm = () => {
                                 ...prev,
                                 password: e.target.value
                             }))}
+                            
                             required
                         />
-                        {isHide ? <EyeOff onClick={() => setIsHide(false)} className=" size-5 cursor-pointer absolute right-2 top-1/2 -translate-y-1/2" /> :
-                            <Eye onClick={() => setIsHide(true)} className=" size-5 cursor-pointer absolute right-2 top-1/2 -translate-y-1/2" />
+                        {isHide ? <EyeOff onClick={() => setIsHide(false)} className=" size-4 cursor-pointer absolute right-2 top-1/2 -translate-y-1/2" /> :
+                            <Eye onClick={() => setIsHide(true)} className=" size-4 cursor-pointer absolute right-2 top-1/2 -translate-y-1/2" />
                         }
                     </div>
                 </div>
