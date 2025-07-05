@@ -12,8 +12,8 @@ export const isValidEmail = (email: string) => {
 };
 
 export const baseUrl = {
-  signUp_api : "http://localhost:2000/v1/auth/sign-up",
-  signIn_api : "http://localhost:2000/v1/auth/sign-in",
+  signUp_api : "/api/v1/auth/sign-up",
+  signIn_api : "/api/v1/auth/sign-in",
   create_trip : "http://localhost:2000/v1/trip/crate",
   get_trip : "http://localhost:2000/v1/trip/get-all-trips",
   get_trip_id : "http://localhost:2000/v1/trip/get-trip-by-id",
