@@ -1,12 +1,14 @@
 import { Hono } from "hono";
 import { handle } from "hono/vercel";
 
-import auth from "../../features/auth/server/route"
+import auth from "../../features/auth/server/route";
+import trips from "../../features/trips/server/route"
 
 const app = new Hono().basePath("/api");
 
 app
-.route("/v1/auth", auth);
+.route("/v1/auth", auth)
+.route("/v1/trips" , trips)
 
 // You only really need one handler:
 export const handler = handle(app);
