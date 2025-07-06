@@ -80,7 +80,7 @@ export const TripDetails = () => {
     return (
         <section className="w-full flex  items-start justify-center">
             {/* start to show the trip details */}
-            <div className=" lg:w-[720px] flex flex-col gap-[36px] px-4">
+            <div className=" lg:w-[720px] w-full  flex flex-col gap-[36px] px-4">
                 <div>
                     {loading && (
                         <div className=" flex flex-col gap-[36px]">
