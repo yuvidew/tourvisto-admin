@@ -51,7 +51,7 @@ export const useGetTripById = (
                 return;
             }
 
-            setTrip(res.data.trip);
+            setTrip(res.data.trip[0]);
         } catch (error) {
             console.error("Error fetching trip by ID:", error);
             toast.error("Failed to fetch trip details");
