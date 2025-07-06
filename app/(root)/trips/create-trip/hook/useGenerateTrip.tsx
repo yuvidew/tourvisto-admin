@@ -1,3 +1,4 @@
+import { baseUrl } from "@/lib/utils";
 import { formDatatype } from "@/types/type";
 import axios from "axios";
 import { useRouter } from "next/navigation";
@@ -54,8 +55,7 @@ export const useGenerateTrip = () : {
 
             const image = response.data.images;
 
-            const response1 = await axios.post(
-                "http://localhost:2000/v1/trip/crate",
+            const response1 = await axios.post(baseUrl.create_trip,
                 {
                     ...formData,
                     result,
@@ -70,7 +70,7 @@ export const useGenerateTrip = () : {
                 }
             );
 
-            if (response1.status !== 200) {
+            if (response1.status !== 201) {
                 toast.error("Failed to save the trip");
                 setError("Failed to save the trip");
                 return null;
