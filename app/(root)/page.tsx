@@ -2,7 +2,8 @@ import React from 'react'
 import { Header } from './_components/Header'
 import { StaticCard } from './_components/StaticCard'
 import { TripsList } from './_components/TripsList'
-import { Card, CardHeader, CardTitle } from '@/components/ui/card'
+import { UsersSignUpCard } from './_components/UsersCard'
+import { BookedTripsCard } from './_components/BookedTripsCard'
 
 const Dashboard = () => {
     const dashboardStats = {
@@ -61,20 +62,8 @@ const Dashboard = () => {
 
                 {/* start to latest sign up and booked trips */}
                 <div className=' flex gap-[16px]'>
-                    <Card className='w-full'>
-                        <CardHeader>
-                            <div className='border-b-[2px] border-[#E5E5EF] py-3'>
-                                <CardTitle>Latest user signups</CardTitle>
-                            </div>
-                        </CardHeader>
-                    </Card>
-                    <Card className='w-full'>
-                        <CardHeader>
-                            <div className='border-b-[2px] border-[#E5E5EF] py-3'>
-                                <CardTitle>Latest trip bookings</CardTitle>
-                            </div>
-                        </CardHeader>
-                    </Card>
+                    <UsersSignUpCard/>
+                    <BookedTripsCard/>
                 </div>
                 {/* end to latest sign up and booked trips */}
             </div>
